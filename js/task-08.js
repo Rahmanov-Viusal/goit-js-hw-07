@@ -12,7 +12,7 @@ function getAmount() {
 function createBoxes(amount) {
     const basicSize = 30;
     const fragment = document.createDocumentFragment();
-  for (var i = 0; i < amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const size = basicSize + i * 10;
     const div = document.createElement("div");
     div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${random()} , ${random()} , ${random()} )`;
