@@ -1,12 +1,9 @@
-
-document.getElementById("validation-input").onblur = function() {
-    console.log(this.value.length);
-    if (this.getAttribute('data-length') === this.value.length) { 
-      this.classList.remove('valid');
-      this.classList.add('invalid');
-    } else {
-      this.classList.remove('invalid');
-      this.classList.add('valid');
-    }
-  };
-
+const form = document.querySelector('#validation-input');
+form.addEventListener('blur', onCheckForm);
+function onCheckForm(event) {
+  if(event.target.value.length === +event.target.dataset.length ){
+form.className = 'valid';
+}else{
+form.className = 'invalid';
+}
+}
